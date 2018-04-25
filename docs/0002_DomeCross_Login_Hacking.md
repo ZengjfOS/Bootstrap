@@ -81,7 +81,7 @@
             -->
             <div role="tabpanel" class="tab-pane active " id="reg">
                 <!--注册-->
-                <!-
+                <!--
                     1. log.css:
                         .inside_form{
                             padding:20px 25px;
