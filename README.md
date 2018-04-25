@@ -18,3 +18,4 @@
 ## Docs
 
 * [0001_Bootstrap_Base.md](./docs/0001_Bootstrap_Base.md)
+* [0002_DomeCross_Login_Hacking.md](./docs/0002_DomeCross_Login_Hacking.md)
