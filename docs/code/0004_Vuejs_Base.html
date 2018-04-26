@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Hello Vue</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container bg-default">
+
+      <div id="nav">
+
+        {{ message }}
+
+        <!-- for循环 -->
+        <ol>
+          <li v-for="todo in todos">
+            <span v-if="show">
+              {{ todo.text }}
+            </span>
+          </li>
+        </ol>
+
+        <!-- bootstrap和vue共用的方法 -->
+        <input type="text" class="form-control" v-model="inputMessage"> <br />
+        <button class="btn" v-bind:class="{ 'btn-primary': show }" v-on:click="reverseMessage">逆转消息</button>
+
+        <!-- 自定义组件 -->
+        <todo-item></todo-item>
+        <todo-item-prop v-for="item in todos" v-bind:todo="item" v-bind:key="item.text"></todo-item-prop>
+
+        <!-- 测试可视、隐藏 -->
+        <transition name="fade">
+        <h1 v-show="show">Hello!</h1>
+        </transition>
+
+        <!-- 测试过滤器、for循环、if判断 -->
+        <li v-for="n in evenNumbers" v-if="n > 2">{{ n }}</li>
+
+        <div>
+          <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+          <label for="jack">Jack</label>
+          <input type="checkbox" id="john" value="John" v-model="checkedNames">
+          <label for="john">John</label>
+          <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+          <label for="mike">Mike</label>
+          <br>
+          <span>Checked names: {{ checkedNames }}</span>
+        </div>
+
+        <div>
+          <input type="radio" id="one" value="One" v-model="picked">
+          <label for="one">One</label>
+          <br>
+          <input type="radio" id="two" value="Two" v-model="picked">
+          <label for="two">Two</label>
+          <br>
+          <span>Picked: {{ picked }}</span>
+        </div>
+
+        <button class="btn" v-bind:class="{ 'btn-primary': show }" v-on:click="show = !show">Show Toggle</button>
+        
+      </div>
+    <div>
+  </body>
+
+  <script src="js/vue.min.js"></script>
+
+  <script>
+    var data = {
+      message: 'Hello Vue!',
+      show: true,
+      inputMessage: "Please Type Message.",
+      numbers: [ 1, 2, 3, 4, 5 ],
+      checkedNames: [],
+      picked: '',
+      todos: [
+        { text: '学习 JavaScript' },
+        { text: '学习 Vue' },
+        { text: '整个牛项目' }
+      ]
+    };
+
+    var app = new Vue({
+      /**
+       * 1. el          --> element;
+       * 2. #           --> id;
+       * 3. #nav        --> id = nav;
+       * 4. el: '#nav'  --> element id eq 'nav'
+       */
+      el: '#nav',
+      // data field
+      data: data,
+      // 绑定的Click函数或者同用函数
+      methods: {
+        reverseMessage: function () {
+          this.message = this.message.split('').reverse().join('');
+        }
+      },
+      // 监视变量
+      watch: {
+        message: function (newValue, oldValue) {
+          console.log(newValue + ", " + oldValue);
+        }
+      },
+      // 过滤器
+      computed: {
+        evenNumbers: function () {
+          return this.numbers.filter(function (number) {
+            return number % 2 === 0
+          })
+        }
+      }
+    });
+
+    // 定义名为 todo-item 的新组件
+    Vue.component('todo-item', {
+      template: '<li>这是个待办项</li>'
+    })
+
+    Vue.component('todo-item-prop', {
+      // todo-item 组件现在接受一个
+      // "prop"，类似于一个自定义特性。
+      // 这个 prop 名为 todo。
+      props: ['todo'],
+      template: '<li>{{ todo.text }}</li>'
+    })
+
+    console.log(app.$data == data);
+    console.log(app.message == data.message);
+    console.log(app.todos.push({text: '不学了'}));
+    console.log(app.message = "Hello World!");
+    console.log(app.show = false);
+  </script>
+</html>
