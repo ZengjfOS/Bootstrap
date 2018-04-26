@@ -6,6 +6,8 @@
 
 * [Bootstrap 教程](http://www.runoob.com/bootstrap/bootstrap-tutorial.html)
 * [Bootstrap 4 Introduction](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+* [bootstrap 4 pull-right无效](http://www.cnblogs.com/zengjfgit/p/8945925.html)
+* [bootstrap 4 移除Glyphicons](http://www.cnblogs.com/zengjfgit/p/8949532.html)
 
 ## DownLoad
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Popup</title>
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">   
     <link href="css/popup.css" rel="stylesheet">
 
@@ -16,12 +17,12 @@
                 <div class="container-fluid margin_top_10">
                     <span type="button" class="btn btn-success pop_title width_100 {{add_this}}" addCurDomain>
                         <span class="pull-left">将当前网站加入多点测试</span>
-                        <span class="glyphicon glyphicon-plus-sign pull-right"></span>
+                        <span class="fas fa-user"></span>
                     </span>
 
                     <span role="group" class="btn-group pop_title width_100 {{remove_this}}" removeCurDomain>
                         <span  type="button" class=" btn btn-default pop_title" disabled>当前网站已在测试列表</span>
-                        <span  type="button" class="btn btn-default glyphicon glyphicon-trash trash" data-toggle="tooltip" data-placement="left" title="从多点测试中移除该域名"></span>
+                        <span  type="button" class="btn btn-default fas fa-user trash" data-toggle="tooltip" data-placement="left" title="从多点测试中移除该域名"></span>
                     </span>
                 </div>
             </div>
@@ -68,7 +69,7 @@
             <!--个人设置-->
             <div class="container-fluid margin_bottom_10 href_options margin_bottom_15" hrefToOptions>
                 <div type="button" class="btn {{personSetClass}} btn-xs pop_title">
-                    <span class="pull-left">{{personSet}}<img id="img" class="hidden" src="/images/loading.gif"></span>
+                    <span class="pull-left">{{personSet}}<img id="img" class="hidden" src="images/loading.gif"></span>
                 </div>
                 <span class="glyphicon glyphicon-menu-right pull-right pop_title cursor"></span>
             </div>

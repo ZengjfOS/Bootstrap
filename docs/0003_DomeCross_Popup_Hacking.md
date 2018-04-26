@@ -13,6 +13,7 @@
 
 ```HTML
 <!DOCTYPE html>
+<!-- AngularJS lib -->
 <html lang="zh-cn" ng-app="rocket">
 <head>
     <meta charset="utf-8">
@@ -26,6 +27,18 @@
     <div class="{{tab3}}">
             <!--新站点代理添加-->
             <div class="{{normal_adds_div}}">
+                <!--
+                    1. popup.css
+                        .pop_title{
+                            font-size: 11px;
+                        }
+                        .width_100{
+                            width: 100%;
+                        }
+                        .margin_top_10{
+                            margin-top:12px;
+                        }
+                -->
                 <div class="container-fluid text-center pop_title width_100 margin_top_10" id="currentTabUrl">{{currentTabUrl}} </div>
                 <div class="container-fluid margin_top_10">
                     <span type="button" class="btn btn-success pop_title width_100 {{add_this}}" addCurDomain>
