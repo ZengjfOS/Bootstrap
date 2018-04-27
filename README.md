@@ -20,6 +20,7 @@
 
 ## Docs
 
+* [0006_TensorFlow_Fitting_Curve_And_CNN.md](./docs/0006_TensorFlow_Fitting_Curve_And_CNN.md)
 * [0005_TensorFlow_js.md](./docs/0005_TensorFlow_js.md)
 * [0004_Vuejs_Base.md](./docs/0004_Vuejs_Base.md)
 * [0003_DomeCross_Popup_Hacking.md](./docs/0003_DomeCross_Popup_Hacking.md)
