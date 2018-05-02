@@ -1,0 +1,24 @@
+{
+  "name": "ZengjfOS",
+  "version": "1.0",
+  "description": "Chrome Extension!",
+  "author": "zengjf",
+  "icons": {
+    "16": "images/icon.png"
+  },
+  "background": {
+        "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "ZengjfOS"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://unpkg.com/ccxt https://www.okex.com/v2; object-src 'self'",
+  "options_page": "index.html",
+  // 跨域访问权限设置
+  "permissions": [
+    "contextMenus",
+    "https://www.okex.com/v2"
+  ],
+  "manifest_version": 2
+}

@@ -20,6 +20,8 @@
 
 ## Docs
 
+* [0009_Javascript_CCXT.md](./docs/0009_Javascript_CCXT.md)
+* [0008_Javascript_Tracking.md](./docs/0008_Javascript_Tracking.md)
 * [0007_Chrome_Camera.md](./docs/0007_Chrome_Camera.md)
 * [0006_TensorFlow_Fitting_Curve_And_CNN.md](./docs/0006_TensorFlow_Fitting_Curve_And_CNN.md)
 * [0005_TensorFlow_js.md](./docs/0005_TensorFlow_js.md)
