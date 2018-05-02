@@ -5,6 +5,12 @@
 * [ccxt/ccxt](https://github.com/ccxt/ccxt)
 * [Browserify 使用指南](http://zhaoda.net/2015/10/16/browserify-guide/)
 
+## 常用接口说明
+
+* [Public/Private API](https://github.com/ccxt/ccxt/wiki/Manual#publicprivate-api)
+* [Unified API](https://github.com/ccxt/ccxt/wiki/Manual#unified-api)
+* [Authentication](https://github.com/ccxt/ccxt/wiki/Manual#authentication)
+
 ## 简单示例
 
 * [Chrome Extansion Sample Code](./code/0009_Javascript_CCXT)
@@ -231,7 +237,3 @@
   }
   
   ```
-
-## Public/Private API
-
-https://github.com/ccxt/ccxt/wiki/Manual#publicprivate-api
