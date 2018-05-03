@@ -20,6 +20,7 @@
 
 ## Docs
 
+* [0010_Browserify_Base.md](./docs/0010_Browserify_Base.md)
 * [0009_Javascript_CCXT.md](./docs/0009_Javascript_CCXT.md)
 * [0008_Javascript_Tracking.md](./docs/0008_Javascript_Tracking.md)
 * [0007_Chrome_Camera.md](./docs/0007_Chrome_Camera.md)
