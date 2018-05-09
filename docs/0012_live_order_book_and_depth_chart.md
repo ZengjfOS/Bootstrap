@@ -14,6 +14,7 @@
 
 * `chart.dataLoader.url="https://poloniex.com/public?command=returnOrderBook&currencyPair=BTC_ETH&depth=10";`
 * `chart.dataLoader.loadData();`
+* `chart.categoryAxis.title="price(ziber/usdt)";`
 
 ## Code Hacking
 

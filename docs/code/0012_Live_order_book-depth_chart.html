@@ -8,7 +8,7 @@
 <style>
 #chartdiv {
   width: 100%;
-  height: 500px;
+  height: 1000px;
 }
 </style>
 
@@ -33,19 +33,19 @@ var chart = AmCharts.makeChart("chartdiv", {
   "type": "serial",
   "theme": "light",
   "dataLoader": {
-    "url": "https://poloniex.com/public?command=returnOrderBook&currencyPair=BTC_ETH&depth=50",
+    "url": "http://api.coinbene.com/v1/market/orderbook?symbol=ethbtc&depth=50",
     "format": "json",
     "reload": 30,
     "postProcess": function(data) {
-      
+
       // Function to process (sort and calculate cummulative volume)
       function processData(list, type, desc) {
-        
+
         // Convert to data points
         for(var i = 0; i < list.length; i++) {
           list[i] = {
-            value: Number(list[i][0]),
-            volume: Number(list[i][1]),
+            value: Number(list[i].price),
+            volume: Number(list[i].quantity),
           }
         }
        
@@ -98,8 +98,8 @@ var chart = AmCharts.makeChart("chartdiv", {
       
       // Init
       var res = [];
-      processData(data.bids, "bids", true);
-      processData(data.asks, "asks", false);
+      processData(data.orderbook.bids, "bids", true);
+      processData(data.orderbook.asks, "asks", false);
       
       //console.log(res);
       return res;
