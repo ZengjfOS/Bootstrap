@@ -20,6 +20,8 @@
 
 ## Docs
 
+* [0012_live_order_book_and_depth_chart.md](./docs/0012_live_order_book_and_depth_chart.md)
+* [0011_ECharts.md](./docs/0011_ECharts.md)
 * [0010_Browserify_Base.md](./docs/0010_Browserify_Base.md)
 * [0009_Javascript_CCXT.md](./docs/0009_Javascript_CCXT.md)
 * [0008_Javascript_Tracking.md](./docs/0008_Javascript_Tracking.md)
