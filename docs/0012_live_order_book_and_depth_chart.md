@@ -231,6 +231,14 @@ function balloon(item, graph) {
   return txt;
 }
 
+/**
+ * https://docs.amcharts.com/3/javascriptcharts/AmCharts
+ *
+ * Returns string formatter with the provided settings. Formatter is an object with precision, 
+ * decimalSeparator and thousandsSeparator defined, like: {precision: 2, decimalSeparator: '.', 
+ * thousandsSeparator: ','}; If you don't need to adjust precision set it to -1. zeroCount defines 
+ * how many zeros should be added after comma (useful when formatting currencies).
+ */
 function formatNumber(val, chart, precision) {
   return AmCharts.formatNumber(
     val, 
