@@ -20,6 +20,7 @@
 
 ## Docs
 
+* [0014_Promise_Prototype.md](./docs/0014_Promise_Prototype.md)
 * [0013_Multiple_Value_Axes.md](./docs/0013_Multiple_Value_Axes.md)
 * [0012_live_order_book_and_depth_chart.md](./docs/0012_live_order_book_and_depth_chart.md)
 * [0011_ECharts.md](./docs/0011_ECharts.md)
